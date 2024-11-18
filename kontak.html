@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - ESDURA</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        /* Navigation Styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            justify-content: space-between;
+        }
+
+        .hamburger div {
+            height: 4px;
+            width: 100%;
+            background-color: #333;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item img {
+            margin-right: 15px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer div {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin-top: 0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer .social-media a {
+            margin: 0 10px;
+        }
+
+        .footer .social-media i {
+            font-size: 20px;
+        }
+
+        .footer-bottom {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            nav ul {
+                font-size: 14px;
+            }
+
+            .contact-info, .contact-form {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-item img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div {
+                margin: 20px 0;
+            }
+
+            .footer .social-media a {
+                margin: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            nav li {
+                margin: 5px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div {
+                margin: 20px 0;
+            }
+
+            .footer .social-media img {
+                margin: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+            }
+
+            .footer-bottom {
+                padding: 20px 0;
+            }
+
+            .footer .social-media img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="smp.png" alt="Logo" height="42" width="42">
+            <img src="esdura.png" alt="Logo" height="46" width="100">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="#">Profil Sekolah</a></li>
+                <li><a href="ppdb.html">PPDB</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="sarana.html">Sarana</a></li>
+                <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+                <li><a href="prestasi.html">Prestasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Hubungi Kami</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <img src="email.png" alt="Email Icon" height="42" width="42">
+                        <p><strong>Email:</strong><br> smpn2rancaekek@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="location.png" alt="Location Icon" height="42" width="42">
+                        <p><strong>Alamat:</strong><br> Bojongsalam, Kec Rancaekek Kab. Bandung Jawa Barat 40394</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="phone.png" alt="Phone Icon" height="42" width="42">
+                        <p><strong>Telepon:</strong><br> 081394039493</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Kotak Saran</h2>
+                <form action="#" method="post">
+                    <input type="text" name="nama" placeholder="Nama" required>
+                    <input type="email" name="email" placeholder="Email *" required>
+                    <input type="tel" name="telepon" placeholder="Nomor Telepon">
+                    <textarea name="pesan" placeholder="Pesan*" rows="5"></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+            <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+        </div>
+        <div>
+            <h3>Info Kontak</h3>
+            <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+            <p>📞 081394039493</p>
+            <p>✉️ smpn2rancaekek@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank"><img src="twitter (1).png" alt="Twitter" height="30" width="30"></a>
+            <a href="#" target="_blank"><img src="instagram.png" alt="Instagram" height="30" width="30"></a>
+            <a href="#" target="_blank"><img src="facebook.png" alt="Facebook" height="30" width="30"></a>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>2024 – SMPN 2 Rancaekek</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMPN 2 Rancaekek</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            color: #333;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-image: url("path/to/your/hero-image.jpg");
+            background-position: center;
+            padding: 250px 0;
+            color: black;
+            background-color: rgba(95, 89, 89, 0.301);
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer div {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .footer h3 {
+            margin-top: 0;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social-media a {
+            margin: 0 10px;
+        }
+        .footer .social-media i {
+            font-size: 20px;
+        }
+        .footer-bottom {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Hamburger Icon */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #333;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            nav li {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div {
+                margin: 15px 0;
+            }
+
+            .footer .social-media a {
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                text-align: center;
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            nav li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 150px 0;
+            }
+
+            .hero h1 {
+                font-size: 1.2em;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer div {
+                margin: 10px 0;
+            }
+
+            .footer-bottom {
+                padding: 8px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 100px 0;
+            }
+
+            .hero h1 {
+                font-size: 1em;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div p {
+                font-size: 14px;
+            }
+
+            .footer-bottom {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><img src="smp.png" alt="Image" height="42" width="42"></li>
+                    <li><img src="esdura.png" alt="Image" height="46" width="100"></li> 
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="#">Profil Sekolah</a></li>
+                    <li><a href="ppdb.html">PPDB</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="sarana.html">Sarana</a></li>
+                    <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+                    <li><a href="prestasi.html">Prestasi</a></li>
+                    <li><a href="#">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <center><h3>Visi Misi</h3>
+        <img src="guru.jpg" alt="Image" height="250" width="400">
+        <h2>Visi</h2></center>
+        <p>SMPN 2 Rancaekek...</p>
+
+        <center><h3>Misi</h3></center>
+        <p>1. SMPN 2 Rancaekek...</p>
+        <p>2. SMPN 2 Rancaekek...</p>
+        <p>3. SMPN 2 Rancaekek...</p>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+            <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+        </div>
+        <div>
+            <h3>Info Kontak</h3>
+            <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+            <p>📞 081394039493</p>
+            <p>✉️ smpn2rancaekek@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3>Social Media</h3>
+            <img src="twitter (1).png" alt="Image" height="30" width="30">
+            <img src="instagram.png" alt="Image" height="30" width="30">
+            <img src="facebook.png" alt="Image" height="30" width="30">
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>2024 – SMPN 2 Rancaekek</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambutan Kepala Sekolah - SMPN 2 Rancaekek</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* Logo in Navbar */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            margin-right: 10px;
+        }
+
+        /* Hamburger Menu */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #007bff;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Sambutan Section */
+        .sambutan-section {
+            padding: 40px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .sambutan-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .sambutan-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .sambutan-section img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer div {
+            margin: 15px 0;
+        }
+
+        .footer h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer .social-media a {
+            margin: 0 15px;
+        }
+
+        .footer .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-bottom {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            nav li {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div {
+                margin: 15px 0;
+            }
+
+            .footer .social-media a {
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                width: 100%;
+                display: none; /* Hide menu on mobile */
+            }
+
+            nav.active ul {
+                display: flex; /* Show menu when hamburger is clicked */
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .menu-icon {
+                display: block; /* Show hamburger icon */
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-bottom {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .footer-bottom {
+                padding: 8px;
+            }
+
+            .footer .social-media a {
+                margin: 0 5px;
+            }
+
+            .footer .social-media img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-logo">
+                    <!-- Logo will always be visible -->
+                    <img src="smp.png" alt="SMP Logo" height="42" width="42">
+                    <img src="esdura.png" alt="SMP Name" height="46" width="100">
+                </div>
+                <!-- Hamburger Menu -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <!-- Navigation Links -->
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="#">Profil Sekolah</a></li>
+                    <li><a href="ppdb.html">PPDB</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="sarana.html">Sarana</a></li>
+                    <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+                    <li><a href="prestasi.html">Prestasi</a></li>
+                    <li><a href="#">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sambutan Kepala Sekolah</h1>
+            <p>Selamat datang di SMP Negeri 2 Rancaekek. Berikut adalah sambutan dari Kepala Sekolah kami.</p>
+        </div>
+    </section>
+
+    <!-- Sambutan Kepala Sekolah Section -->
+    <section class="sambutan-section">
+        <div class="container">
+            <h2>Sambutan Kepala Sekolah</h2>
+            <img src="guru.jpg" alt="Foto Kepala Sekolah" width="300" height="400">
+            <p>
+                Assalamu'alaikum warahmatullahi wabarakatuh.  
+                Selamat datang di SMP Negeri 2 Rancaekek. Kami sangat bangga dapat memberikan layanan pendidikan terbaik untuk anak-anak kita.
+                Sekolah ini terus berupaya untuk mengembangkan pendidikan yang berkualitas dengan berbagai inovasi dan pembaharuan. Kami juga percaya bahwa kerjasama antara guru, orang tua, dan masyarakat sangat penting untuk mencapai tujuan pendidikan yang optimal.  
+                Kami berharap, melalui sambutan ini, semua pihak dapat bekerja sama dalam membentuk generasi muda yang cerdas, berakhlak mulia, dan siap menghadapi tantangan di masa depan.
+                Terima kasih atas dukungannya kepada SMP Negeri 2 Rancaekek.
+                <br><br>
+                Wassalamu'alaikum warahmatullahi wabarakatuh.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div>
+            <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+            <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+        </div>
+        <div>
+            <h3>Info Kontak</h3>
+            <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+            <p>📞 081394039493</p>
+            <p>✉️ smpn2rancaekek@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank"><img src="twitter (1).png" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>2024 – SMPN 2 Rancaekek</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

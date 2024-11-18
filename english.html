@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMPN 2 Rancaekek</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    .header {
+      background-color: #ffffff;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .header img {
+      height: 50px;
+      margin-left: 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Navbar Links */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Mobile Menu (Hamburger) */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .menu {
+      display: block;
+      text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 20px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      nav li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav ul.active {
+        display: block;
+      }
+
+      .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 10px;
+      }
+
+      .hamburger.active div:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -10px;
+      }
+    }
+
+    /* Content */
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      color: #007bff;
+      font-size: 24px;
+    }
+
+    .content p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .content img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer div {
+      margin: 10px 0;
+    }
+
+    .footer h3 {
+      margin-top: 0;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer .social-media a {
+      margin: 0 10px;
+    }
+
+    .footer .social-media i {
+      font-size: 20px;
+    }
+
+    .footer-bottom {
+      background-color: #0056b3;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav>
+        <div>
+          <img src="smp.png" alt="Logo" height="42" width="42">
+          <img src="esdura.png" alt="Logo Text" height="46" width="100">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="beranda.html">Beranda</a></li>
+          <li><a href="#">Profil Sekolah</a></li>
+          <li><a href="ppdb.html">PPDB</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="sarana.html">Sarana</a></li>
+          <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+          <li><a href="prestasi.html">Prestasi</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1>ENGLISH CLUB</h1>
+    <img alt="Group of students in blue uniforms posing for a photo" src="english.png" width="800" height="400"/>
+    <p>
+      SMP Negeri 2 Rancaekek kembali berpartisipasi dalam upaya nasional untuk mengukur kualitas pendidikan melalui kegiatan Asesmen Nasional Berbasis Komputer (ANBK). Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+      <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+    </div>
+    <div>
+      <h3>Info Kontak</h3>
+      <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+      <p>📞 081394039493</p>
+      <p>✉️ smpn2rancaekek@gmail.com</p>
+    </div>
+    <div class="social-media">
+      <h3>Social Media</h3>
+      <img src="twitter (1).png" alt="Twitter" height="30" width="30">
+      <img src="instagram.png" alt="Instagram" height="30" width="30">
+      <img src="facebook.png" alt="Facebook" height="30" width="30">
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>2024 – SMPN 2 Rancaekek</p>
+  </div>
+
+  <script>
+    // Script to toggle the hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

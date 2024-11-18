@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang & Sarana</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #333;
+      padding: 10px 0;
+      position: relative;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navbar Styles */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Hamburger Styles */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Main Content */
+    h1, h2 {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer div {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .footer h3 {
+      margin-top: 0;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer .social-media a {
+      margin: 0 10px;
+    }
+
+    .footer .social-media i {
+      font-size: 20px;
+    }
+
+    .footer-bottom {
+      background-color: #0056b3;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Media Queries for Responsiveness */
+    /* Tablets and below */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 10px;
+      }
+
+      nav li {
+        margin: 0 8px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Mobile Phones */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        flex-direction: column;
+      }
+
+      nav li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer div {
+        margin: 10px;
+      }
+
+      .footer-bottom {
+        padding: 10px;
+      }
+    }
+
+    /* Small Mobile Phones */
+    @media (max-width: 480px) {
+      .container {
+        padding: 5px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .footer {
+        padding: 10px;
+      }
+
+      .footer div p {
+        font-size: 12px;
+      }
+
+      .footer .social-media a {
+        margin: 5px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+    }
+
+    /* Active class for showing the menu when toggled */
+    nav ul.active {
+      display: flex;
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul>
+        <li><img src="smp.png" alt="Logo" height="42" width="42"></li>
+        <li><img src="esdura.png" alt="Logo" height="46" width="100"></li>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="#">Profil Sekolah</a></li>
+        <li><a href="ppdb.html">PPDB</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="sarana.html">Sarana</a></li>
+        <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Ruang & Sarana</h1>
+
+  <h2>Ruang Kantor</h2>
+  <img src="guru.jpg" alt="Ruang Kantor">
+
+  <h2>Ruang Kelas</h2>
+  <img src="guru.jpg" alt="Ruang Kelas">
+
+  <h2>Ruang Laboratorium</h2>
+  <img src="guru.jpg" alt="Ruang Laboratorium">
+
+  <h2>Sarana Olahraga</h2>
+  <img src="guru.jpg" alt="Sarana Olahraga">
+
+  <h2>Sarana Ibadah</h2>
+  <img src="guru.jpg" alt="Sarana Ibadah">
+
+  <h2>Sarana Kesehatan</h2>
+  <img src="guru.jpg" alt="Sarana Kesehatan">
+
+  <h2>Perpustakaan</h2>
+  <img src="guru.jpg" alt="Perpustakaan">
+</main>
+
+<footer class="footer">
+  <div>
+    <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+    <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+  </div>
+  <div>
+    <h3>Info Kontak</h3>
+    <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+    <p>📞 081394039493</p>
+    <p>✉️ smpn2rancaekek@gmail.com</p>
+  </div>
+  <div class="social-media">
+    <h3>Social Media</h3>
+    <img src="twitter (1).png" alt="Twitter" height="30" width="30">
+    <img src="instagram.png" alt="Instagram" height="30" width="30">
+    <img src="facebook.png" alt="Facebook" height="30" width="30">
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>2024 – SMPN 2 Rancaekek</p>
+</div>
+
+<script>
+  // Function to toggle the menu visibility on mobile
+  function toggleMenu() {
+    var nav = document.querySelector("nav ul");
+    nav.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>

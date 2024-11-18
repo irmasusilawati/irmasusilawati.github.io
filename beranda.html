@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMPN 2 Rancaekek</title>
+    <style>
+        /* Umum */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-image: url('guru.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            color: #333;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url("path/to/your/hero-image.jpg");
+            background-position: center;
+            text-align: center;
+            padding: 200px 0;
+            color: white;
+            background-color: rgba(95, 89, 89, 0.301);
+            margin-top: 60px; /* For fixed header */
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer div {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .footer h3 {
+            margin-top: 0;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social-media a {
+            margin: 0 10px;
+        }
+        .footer .social-media i {
+            font-size: 20px;
+        }
+        .footer-bottom {
+            background-color: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            background-color: transparent;
+            border: none;
+            color: #333;
+        }
+
+        /* Responsiveness */
+        @media only screen and (max-width: 768px) {
+            nav ul {
+                text-align: left;
+                padding-left: 20px;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #fff;
+                margin-top: 10px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            nav li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+                padding: 100px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer div {
+                margin-bottom: 20px;
+            }
+
+            .footer .social-media a {
+                margin: 0 5px;
+            }
+
+            /* Hamburger Menu visible in mobile view */
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 10;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+
+        /* For smaller screens (like mobile) */
+        @media only screen and (max-width: 480px) {
+            header {
+                padding: 5px 0;
+            }
+
+            nav li img {
+                max-width: 30px;
+                max-height: 30px;
+            }
+
+            .button {
+                padding: 8px 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+
+            .footer-bottom {
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Logo -->
+                <div style="display: inline-block; margin-right: 20px;">
+                    <img src="smp.png" alt="Logo" height="42" width="42">
+                    <img src="esdura.png" alt="Logo" height="46" width="100">
+                </div>
+                <!-- Hamburger Button -->
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <!-- Menu -->
+                <ul id="menu"> 
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <div class="dropdown">
+                        <a href="#">Profil Sekolah</a>
+                        <div class="dropdown-content">
+                            <a href="kepalasekolah.html">Sambutan Kepala Sekolah</a>
+                            <a href="sejarah.html">Sejarah Sekolah</a>
+                            <a href="visimisi.html">Visi & Misi</a>
+                            <a href="tenagapendidik.html">Tenaga Pendidik</a>
+                        </div>
+                    </div>
+                    <li><a href="ppdb.html">PPDB</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="sarana.html">Sarana</a></li>
+                    <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+                    <li><a href="prestasi.html">Prestasi</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>SELAMAT DATANG DI<br>SMP NEGERI 2 RANCAEKEK</h1>
+            <a href="kontak.html" class="button">Kontak Kami</a>
+            <a href="ppdb.html" class="button">PPDB</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <img alt="School Logo" height="50" src="esdura.png" width="100"/>
+            <p>Profil Singkat SMP Negeri 2 Rancaekek</p>
+        </div>
+        <div>
+            <h3>Info Kontak</h3>
+            <p>Bojongsalam, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+            <p>📞 081394039493</p>
+            <p>✉️ smpn2rancaekek@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3>Social Media</h3>
+            <img src="twitter (1).png" alt="Twitter" height="30" width="30">
+            <img src="instagram.png" alt="Instagram" height="30" width="30">
+            <img src="facebook.png" alt="Facebook" height="30" width="30">
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <p>2024 – SMPN 2 Rancaekek</p>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
